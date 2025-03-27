@@ -63,11 +63,11 @@ def music_detection_intf():
                     col1, col2 = st.columns(2)
                     st.success("Done!")
                     with col1:
-                        st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
+                        st.image(uploaded_image, caption="Uploaded Image", use_container_width=True)
                     with col2:
-                        st.image(res[0].plot(labels=show_labels), caption='Detected Image', use_column_width=True)
+                        st.image(res[0].plot(labels=show_labels), caption='Detected Image', use_container_width=True)
             else:
-                    st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
+                    st.image(uploaded_image, caption="Uploaded Image", use_container_width=True)
         else:
             st.caption("Upload file or use examples to continue")
     except Exception as e:
@@ -77,9 +77,9 @@ def home_intf():
     col1,col2 = st.columns(2)
 
     with col1:
-        st.image("resources/calfa-white.png",use_column_width=True)
+        st.image("resources/calfa-white.png",use_container_width=True)
     with col2:
-        st.image("resources/tumo.png",use_column_width=True)
+        st.image("resources/tumo.png",use_container_width=True)
     st.write("This workshop is about reading and computing music using AI\nIn this webpage you can find some results of the workshop")
 
 
@@ -102,7 +102,7 @@ def music_reading_intf():
     st.image(image_path)    
 
 def main_intf():
-    st.sidebar.image("https://cardonstudios.com/wp-content/uploads/2015/08/1280px-Music_class_usa.jpg",use_column_width=True)
+    st.sidebar.image("https://cardonstudios.com/wp-content/uploads/2015/08/1280px-Music_class_usa.jpg",use_container_width=True)
     st.sidebar.subheader("Workshop - Reading and computing music with AI")
     #st.sidebar.write("haha yes")
 
